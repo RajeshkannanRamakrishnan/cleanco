@@ -9,10 +9,8 @@ def hello_world():
 def classify():
     if not request.json or not 'company' in request.json:
         abort(400)
-    print(request.json)
     companyName = request.json['company']
-    print(companyName)
-    x = cleanco('salesbox llc')
+    x = cleanco(companyName)
 
     details = {
         'name': companyName,
